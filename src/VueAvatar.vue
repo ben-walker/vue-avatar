@@ -156,14 +156,17 @@
              * Attempt to load the image, if it succeed the letter avatar is replaced with the image
              */
             loadImage() {
+                this.$emit('loadStart')
                 setTimeout(() => {
                     const img = new Image()
                     img.onload = () => {
                         this.loaded_src = this.src
                         this.image_exists = true
+                        this.$emit('loadEnd')
                     }
                     img.onerror = () => {
                         this.image_exists = false
+                        this.$emit('loadEnd')
                     }
                     img.src = this.src
                 }, this.delay)
