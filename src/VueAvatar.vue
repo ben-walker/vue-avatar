@@ -1,6 +1,6 @@
 <template>
     <transition name="vue-avatar" mode="out-in">
-        <div class="vue-avatar" :style="style" :key="loaded_src" :class="{ 'is-loading': loading }">
+        <div class="vue-avatar" :style="style" :key="loaded_src">
             <span v-if="!image_exists">{{ initials }}</span>
         </div>
     </transition>
@@ -102,8 +102,7 @@
         data() {
             return {
                 loaded_src: null,
-                image_exists: false,
-                loading: false
+                image_exists: false
             }
         },
         computed: {
@@ -157,17 +156,14 @@
              * Attempt to load the image, if it succeed the letter avatar is replaced with the image
              */
             loadImage() {
-                this.loading = true
                 setTimeout(() => {
                     const img = new Image()
                     img.onload = () => {
                         this.loaded_src = this.src
                         this.image_exists = true
-                        this.loading = false
                     }
                     img.onerror = () => {
                         this.image_exists = false
-                        this.loading = false
                     }
                     img.src = this.src
                 }, this.delay)
@@ -209,10 +205,3 @@
         },
     }
 </script>
-
-<style scoped>
-.is-loading {
-    transition: transform .3s;
-    transform: scale(0.5)
-}
-</style>
