@@ -110,7 +110,9 @@
              * Only keep the first three extracted letters from the initials
              */
             initials() {
-                return this.format(this.username.replace(/[^a-zA-Z- ]/g, "").match(/\b\w/g)).join('').toUpperCase().substr(0, 3)
+                return this.username === ''
+                    ? ''
+                    : this.format(this.username.replace(/[^a-zA-Z- ]/g, "").match(/\b\w/g)).join('').toUpperCase().substr(0, 3)
             },
             /**
              * Set inline styles
@@ -164,9 +166,7 @@
                 }, this.delay)
             },
             format(parts) {
-                if (!parts) {
-                    return ''
-                } else if (parts.length <= 3) {
+                if (parts.length <= 3) {
                     return parts
                 }
 
