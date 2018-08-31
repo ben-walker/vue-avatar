@@ -162,6 +162,9 @@
                         this.loaded_src = this.src
                         this.image_exists = true
                     }
+                    img.onerror = () => {
+                        this.image_exists = false
+                    }
                     img.src = this.src
                 }, this.delay)
             },
@@ -194,9 +197,9 @@
          */
         watch: {
             src(value) {
-                this.image_exists = false
                 this.$nextTick(function () {
                     if (value) this.loadImage()
+                    else this.image_exists = false
                 })
             },
         },
