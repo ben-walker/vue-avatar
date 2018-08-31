@@ -164,7 +164,9 @@
                 }, this.delay)
             },
             format(parts) {
-                if (parts.length <= 3) {
+                if (!parts) {
+                    return ''
+                } else if (parts.length <= 3) {
                     return parts
                 }
 
