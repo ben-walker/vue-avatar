@@ -105,12 +105,12 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 var setPublicPath = __webpack_require__("HrLf");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/macbook/Projects/vue-avatar/node_modules/.cache/vue-loader","cacheIdentifier":"401db1dc-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueAvatar.vue?vue&type=template&id=685a4533
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"/Users/macbook/Projects/vue-avatar/node_modules/.cache/vue-loader","cacheIdentifier":"401db1dc-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueAvatar.vue?vue&type=template&id=40af9ade
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"vue-avatar","mode":"out-in"}},[_c('div',{key:_vm.loaded_src,staticClass:"vue-avatar",style:(_vm.style)},[(!_vm.image_exists)?_c('span',[_vm._v(_vm._s(_vm.initials))]):_vm._e()])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/VueAvatar.vue?vue&type=template&id=685a4533
+// CONCATENATED MODULE: ./src/VueAvatar.vue?vue&type=template&id=40af9ade
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/builtin/es6/arrayWithoutHoles.js
 function _arrayWithoutHoles(arr) {
@@ -313,7 +313,8 @@ var COLORS_HSL = [[6, 71, 60], [340, 85, 66], [291, 49, 60], [263, 49, 63], [232
         maxWidth: this.size + 'px',
         height: this.size + 'px',
         maxHeight: this.size + 'px',
-        fontSize: Math.floor(this.size / 2.5) + 'px'
+        fontSize: Math.floor(this.size / 2.5) + 'px',
+        verticalAlign: 'middle'
       };
 
       if (this.image_exists) {

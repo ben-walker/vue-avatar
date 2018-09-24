@@ -135,6 +135,7 @@
                     height: this.size + 'px',
                     maxHeight: this.size + 'px',
                     fontSize: Math.floor(this.size / 2.5) + 'px',
+                    verticalAlign: 'middle',
                 }
 
                 if (this.image_exists) {
